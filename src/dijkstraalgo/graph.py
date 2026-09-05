@@ -7,7 +7,7 @@ class Graph:
         # Use an adjacency list to store (node, weight) tuples representing connections between nodes
         self.adj_list: Dict[str, List[Tuple[str, float]]] = {}
 
-    def add_node(self, u: str, v: str, weight: float) -> None:
+    def add_edge(self, u: str, v: str, weight: float) -> None:
         """ Adds an undirected, weighted edge between node u and node v to the adjacency list """
         # Initialize an empty list for a new node getting added to the adjacency list
         if u not in self.adj_list:
