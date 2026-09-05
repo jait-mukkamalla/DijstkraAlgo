@@ -1,7 +1,7 @@
 [project]
 name = "dijkstraalgo"
 version = "0.1.0"
-description = "Dijkstra's algorithm used to find the shortest path in a unweighted, bidirectional graph"
+description = "Dijkstra's algorithm used to find the shortest path in a weighted, bidirectional graph"
 authors = [
     { name = "jait-mukkamalla", email = "jait.mukkamalla@gmail.com" }
 ]
