@@ -1,0 +1,16 @@
+[project]
+name = "dijkstraalgo"
+version = "0.1.0"
+description = "Dijkstra's algorithm used to find the shortest path in a unweighted, bidirectional graph"
+authors = [
+    { name = "jait-mukkamalla", email = "jait.mukkamalla@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+dijkstraalgo = "dijkstraalgo:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
