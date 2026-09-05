@@ -1,4 +1,6 @@
-# Create Graph class to represent an unweighted, bidirectional graph data structure
+import heapq
+
+# Create Graph class to represent a weighted, bidirectional graph data structure
 class Graph:
     def __init__(self):
         # Use an adjacency list to store (node, weight) tuples representing connections between nodes
@@ -15,3 +17,11 @@ class Graph:
         # Add bidirectional edges because we are choosing to have an undirected graph
         self.adj_list[u].append((v, weight))
         self.adj_list[v].append((u, weight))
+
+    def dijkstra(self, start_node: str) -> tuple[dict, dict]:
+        """ Find the shortest path from the start_node to every other node in the graph """
+        pass
+
+    def construct_path(self, previous: list[str], start_node: str, end_node: str) -> dict:
+        """ Build the shortest path from start_node to end_node that was given by dijkstra's algorithm """
+        pass
