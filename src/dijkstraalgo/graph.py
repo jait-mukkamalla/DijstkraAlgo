@@ -47,6 +47,19 @@ class Graph:
 
         return distances, previous
 
+    def get_edges(self) -> List[Tuple[str, str, float]]:
+        """ Returns unique edges in (u, v, weight) format for NetworkX ingestion """
+        edges: List[Tuple[str, str, float]] = []
+        seen = set()
+
+        for u, neighbors in self.adj_list.items():
+            for v, weight in neighbors:
+                if (v, u) not in seen:
+                    edges.append((u, v, weight))
+                    seen.add((u, v))
+
+        return edges
+
 def construct_path(previous: Dict[str, Optional[str]], start_node: str, end_node: str) -> List[str]:
     """ Build the shortest path from start_node to end_node by traversing the 'previous' dict in reverse """
     path: List[str] = []
